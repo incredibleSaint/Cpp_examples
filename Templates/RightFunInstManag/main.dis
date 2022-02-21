@@ -1,0 +1,65 @@
+
+main.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+   0:	f3 0f 1e fa          	endbr64 
+   4:	55                   	push   %rbp
+   5:	48 89 e5             	mov    %rsp,%rbp
+   8:	be 00 00 00 00       	mov    $0x0,%esi
+   d:	bf 00 00 00 00       	mov    $0x0,%edi
+  12:	e8 00 00 00 00       	callq  17 <main+0x17>
+  17:	83 f8 01             	cmp    $0x1,%eax
+  1a:	74 1f                	je     3b <main+0x3b>
+  1c:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 23 <main+0x23>
+  23:	ba 12 00 00 00       	mov    $0x12,%edx
+  28:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 2f <main+0x2f>
+  2f:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 36 <main+0x36>
+  36:	e8 00 00 00 00       	callq  3b <main+0x3b>
+  3b:	be 00 00 00 00       	mov    $0x0,%esi
+  40:	bf 00 00 00 00       	mov    $0x0,%edi
+  45:	e8 00 00 00 00       	callq  4a <main+0x4a>
+  4a:	83 f8 01             	cmp    $0x1,%eax
+  4d:	74 1f                	je     6e <main+0x6e>
+  4f:	48 8d 0d 00 00 00 00 	lea    0x0(%rip),%rcx        # 56 <main+0x56>
+  56:	ba 13 00 00 00       	mov    $0x13,%edx
+  5b:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 62 <main+0x62>
+  62:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 69 <main+0x69>
+  69:	e8 00 00 00 00       	callq  6e <main+0x6e>
+  6e:	b8 00 00 00 00       	mov    $0x0,%eax
+  73:	5d                   	pop    %rbp
+  74:	c3                   	retq   
+
+0000000000000075 <_Z41__static_initialization_and_destruction_0ii>:
+  75:	f3 0f 1e fa          	endbr64 
+  79:	55                   	push   %rbp
+  7a:	48 89 e5             	mov    %rsp,%rbp
+  7d:	48 83 ec 10          	sub    $0x10,%rsp
+  81:	89 7d fc             	mov    %edi,-0x4(%rbp)
+  84:	89 75 f8             	mov    %esi,-0x8(%rbp)
+  87:	83 7d fc 01          	cmpl   $0x1,-0x4(%rbp)
+  8b:	75 32                	jne    bf <_Z41__static_initialization_and_destruction_0ii+0x4a>
+  8d:	81 7d f8 ff ff 00 00 	cmpl   $0xffff,-0x8(%rbp)
+  94:	75 29                	jne    bf <_Z41__static_initialization_and_destruction_0ii+0x4a>
+  96:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 9d <_Z41__static_initialization_and_destruction_0ii+0x28>
+  9d:	e8 00 00 00 00       	callq  a2 <_Z41__static_initialization_and_destruction_0ii+0x2d>
+  a2:	48 8d 15 00 00 00 00 	lea    0x0(%rip),%rdx        # a9 <_Z41__static_initialization_and_destruction_0ii+0x34>
+  a9:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # b0 <_Z41__static_initialization_and_destruction_0ii+0x3b>
+  b0:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # b7 <_Z41__static_initialization_and_destruction_0ii+0x42>
+  b7:	48 89 c7             	mov    %rax,%rdi
+  ba:	e8 00 00 00 00       	callq  bf <_Z41__static_initialization_and_destruction_0ii+0x4a>
+  bf:	90                   	nop
+  c0:	c9                   	leaveq 
+  c1:	c3                   	retq   
+
+00000000000000c2 <_GLOBAL__sub_I_main>:
+  c2:	f3 0f 1e fa          	endbr64 
+  c6:	55                   	push   %rbp
+  c7:	48 89 e5             	mov    %rsp,%rbp
+  ca:	be ff ff 00 00       	mov    $0xffff,%esi
+  cf:	bf 01 00 00 00       	mov    $0x1,%edi
+  d4:	e8 9c ff ff ff       	callq  75 <_Z41__static_initialization_and_destruction_0ii>
+  d9:	5d                   	pop    %rbp
+  da:	c3                   	retq   

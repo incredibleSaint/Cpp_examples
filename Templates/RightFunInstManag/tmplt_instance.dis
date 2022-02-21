@@ -1,0 +1,20 @@
+
+tmplt_instance.o:     file format elf64-x86-64
+
+
+Disassembly of section .text._Z9tmplt_maxIiET_S0_S0_:
+
+0000000000000000 <_Z9tmplt_maxIiET_S0_S0_>:
+   0:	f3 0f 1e fa          	endbr64 
+   4:	55                   	push   %rbp
+   5:	48 89 e5             	mov    %rsp,%rbp
+   8:	89 7d fc             	mov    %edi,-0x4(%rbp)
+   b:	89 75 f8             	mov    %esi,-0x8(%rbp)
+   e:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  11:	3b 45 f8             	cmp    -0x8(%rbp),%eax
+  14:	7e 05                	jle    1b <_Z9tmplt_maxIiET_S0_S0_+0x1b>
+  16:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  19:	eb 03                	jmp    1e <_Z9tmplt_maxIiET_S0_S0_+0x1e>
+  1b:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  1e:	5d                   	pop    %rbp
+  1f:	c3                   	retq   

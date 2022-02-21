@@ -1,0 +1,38 @@
+
+module1.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <_Z9max_user1ii>:
+   0:	f3 0f 1e fa          	endbr64 
+   4:	55                   	push   %rbp
+   5:	48 89 e5             	mov    %rsp,%rbp
+   8:	48 83 ec 10          	sub    $0x10,%rsp
+   c:	89 7d fc             	mov    %edi,-0x4(%rbp)
+   f:	89 75 f8             	mov    %esi,-0x8(%rbp)
+  12:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  15:	8d 50 01             	lea    0x1(%rax),%edx
+  18:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  1b:	89 d6                	mov    %edx,%esi
+  1d:	89 c7                	mov    %eax,%edi
+  1f:	e8 00 00 00 00       	callq  24 <_Z9max_user1ii+0x24>
+  24:	c9                   	leaveq 
+  25:	c3                   	retq   
+
+Disassembly of section .text._Z9tmplt_maxIiET_S0_S0_:
+
+0000000000000000 <_Z9tmplt_maxIiET_S0_S0_>:
+   0:	f3 0f 1e fa          	endbr64 
+   4:	55                   	push   %rbp
+   5:	48 89 e5             	mov    %rsp,%rbp
+   8:	89 7d fc             	mov    %edi,-0x4(%rbp)
+   b:	89 75 f8             	mov    %esi,-0x8(%rbp)
+   e:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  11:	3b 45 f8             	cmp    -0x8(%rbp),%eax
+  14:	7e 05                	jle    1b <_Z9tmplt_maxIiET_S0_S0_+0x1b>
+  16:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  19:	eb 03                	jmp    1e <_Z9tmplt_maxIiET_S0_S0_+0x1e>
+  1b:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  1e:	5d                   	pop    %rbp
+  1f:	c3                   	retq   
