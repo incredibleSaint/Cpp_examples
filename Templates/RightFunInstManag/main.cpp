@@ -16,6 +16,6 @@
 
 int main() {
     assert(max_user1(0, 0) == 1);
-    assert(max_user2(1, 0) == 1);
+    assert(max_user2(0, 0) == 1);
     return 0;
 }
